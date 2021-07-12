@@ -27,11 +27,21 @@ public class Jerry_Movement : MonoBehaviour
 
         // Apply thrust to Jerry if space bar is held down
         if (Input.GetKey("space")) {
+
             spacebarHeld = true;
             Debug.Log("Space was pressed");
-            jerryRb.MovePosition(transform.position + movementVec);
-            if (thrust < 0.5) {
-                thrust += 0.001f;        // Increment thrust a little each frame for acceleration
+
+            // Check totalFuel is greater than 0.1f and apply thrust to Jerry, (with acceleration)
+            if (Fuel_Script.totalFuel > 0.1f) {
+
+                // Decriment totalFuel in the Fuel_Script
+                Fuel_Script.totalFuel -= 0.1f;
+
+                // Apply thrust to Jerry
+                jerryRb.MovePosition(transform.position + movementVec);
+                if (thrust < 0.5) {
+                    thrust += 0.001f / 2;        // Increment thrust a little each frame for acceleration
+                }
             }
         }
 
@@ -49,15 +59,21 @@ public class Jerry_Movement : MonoBehaviour
         if (Input.GetKey("a")) {
             horizontalMovementRightHeld = true;
             horizontalMovement = -0.1f;
-            jerryRb.MovePosition(transform.position + movementVec);
-            movementVec = new Vector3(horizontalMovement, thrust);
+
+            if (Fuel_Script.totalFuel > 0.1f) {
+                jerryRb.MovePosition(transform.position + movementVec);
+                movementVec = new Vector3(horizontalMovement, thrust);
+            }
+                
         }
 
         if (Input.GetKey("d")) {
             horizontalMovementLeftHeld = true;
             horizontalMovement = 0.1f;
-            jerryRb.MovePosition(transform.position + movementVec);
-            movementVec = new Vector3(horizontalMovement, thrust);
+            if (Fuel_Script.totalFuel > 0.1f) {
+                jerryRb.MovePosition(transform.position + movementVec);
+                movementVec = new Vector3(horizontalMovement, thrust);
+            }
         }
 
         // Reset horizontal movement after 'a', 'd', left or right arrows are released
