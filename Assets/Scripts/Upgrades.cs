@@ -32,11 +32,11 @@ public class Upgrades : MonoBehaviour
 	}
 
 
-	public void addGold() {
+	public void AddGold() {
         Coin_Script.totalCoins += 5;
 	}
 
-    public void doubleTankFunc() {
+    public void DoubleTankFunc() {
         if (Coin_Script.totalCoins >= 5 && doubleTank == false) {
             doubleTank = true;
             Fuel_Script.totalFuel *= 2;
@@ -45,7 +45,7 @@ public class Upgrades : MonoBehaviour
         }
 	}
 
-    public void extraCapacityFunc() {
+    public void ExtraCapacityFunc() {
         if (Coin_Script.totalCoins >= 10 && extraCapacity == false) {
             extraCapacity = true;
             Fuel_Script.totalFuel *= 1.5f;
@@ -54,7 +54,7 @@ public class Upgrades : MonoBehaviour
         }
     }
 
-    public void extraEfficiencyFunc() {
+    public void ExtraEfficiencyFunc() {
         if (Coin_Script.totalCoins >= 15 && extraEfficiency == false) {
             extraEfficiency = true;
             Jerry_Movement.burnRate /= 2;
@@ -63,7 +63,7 @@ public class Upgrades : MonoBehaviour
         }
     }
 
-    public void armourFunc() {
+    public void ArmourFunc() {
         if (Coin_Script.totalCoins >= 20 && armour == false) {
             armour = true;
             Coin_Script.totalCoins -= 20;
@@ -71,7 +71,7 @@ public class Upgrades : MonoBehaviour
         }
     }
 
-    public void boosterFunc() {
+    public void BoosterFunc() {
         if (Coin_Script.totalCoins >= 25 && booster == false) {
             booster = true;
             Coin_Script.totalCoins -= 25;
@@ -79,7 +79,7 @@ public class Upgrades : MonoBehaviour
         }
     }
 
-    public void slowFallFunc() {
+    public void SlowFallFunc() {
         if (Coin_Script.totalCoins >= 30 && slowFall == false) {
             slowFall = true;
             Coin_Script.totalCoins -= 30;
@@ -87,7 +87,7 @@ public class Upgrades : MonoBehaviour
         }
     }
 
-    public void hoverFunc() {
+    public void HoverFunc() {
         if (Coin_Script.totalCoins >= 35 && hover == false) {
             hover = true;
             Coin_Script.totalCoins -= 35;
@@ -95,7 +95,7 @@ public class Upgrades : MonoBehaviour
         }
     }
 
-    public void infiniteFuelFunc() {
+    public void InfiniteFuelFunc() {
         if (Coin_Script.totalCoins >= 40 && infiniteFuel == false) {
             infiniteFuel = true;
             Fuel_Script.totalFuel = 1000000.0f;
