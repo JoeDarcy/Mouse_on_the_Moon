@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Jerry_Movement : MonoBehaviour
 {
+    public static float burnRate = 0.1f;
     [SerializeField] private Rigidbody2D jerryRb = null;
     [SerializeField] private float thrust = 10.0f;
     [SerializeField] private float horizontalMovement = 0.0f;
@@ -11,7 +12,7 @@ public class Jerry_Movement : MonoBehaviour
     private bool spacebarHeld = false;
     private bool horizontalMovementRightHeld = false;
     private bool horizontalMovementLeftHeld = false;
-
+    [SerializeField] private float speed = 0.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,9 @@ public class Jerry_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Calculate Jerry's air speed
+        speed = transform.position.y / Time.time;
+
         // Update movement vector with increased or reset thrust
         movementVec = new Vector3(horizontalMovement, thrust);
 
@@ -35,7 +39,7 @@ public class Jerry_Movement : MonoBehaviour
             if (Fuel_Script.totalFuel > 0.1f) {
 
                 // Decriment totalFuel in the Fuel_Script
-                Fuel_Script.totalFuel -= 0.1f;
+                Fuel_Script.totalFuel -= burnRate; //  0.1f;
 
                 // Apply thrust to Jerry
                 jerryRb.MovePosition(transform.position + movementVec);
