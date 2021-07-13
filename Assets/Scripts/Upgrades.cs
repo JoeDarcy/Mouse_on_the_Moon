@@ -91,6 +91,7 @@ public class Upgrades : MonoBehaviour
         if (Coin_Script.totalCoins >= 35 && hover == false) {
             hover = true;
             Coin_Script.totalCoins -= 35;
+            Jerry_Movement.fallSpeed = 0.0001f;
             hoverTick.SetActive(true);
         }
     }

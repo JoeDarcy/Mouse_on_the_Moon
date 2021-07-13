@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class Jerry_Movement : MonoBehaviour
 {
+    // Punblic static variables
     public static float burnRate = 0.1f;
+    public static float fallSpeed = 0.01f;
+
     [SerializeField] private Rigidbody2D jerryRb = null;
     [SerializeField] private float thrust = 10.0f;
     [SerializeField] private float horizontalMovement = 0.0f;
-    private Vector3 movementVec = new Vector3 (0, 0);
+    private Vector3 movementVec = new Vector3 (0, 0, 0);
     private bool spacebarHeld = false;
     private bool horizontalMovementRightHeld = false;
     private bool horizontalMovementLeftHeld = false;
@@ -27,7 +30,7 @@ public class Jerry_Movement : MonoBehaviour
         speed = transform.position.y / Time.time;
 
         // Update movement vector with increased or reset thrust
-        movementVec = new Vector3(horizontalMovement, thrust);
+        movementVec = new Vector3(horizontalMovement, thrust, 0);
 
         // Apply thrust to Jerry if space bar is held down
         if (Input.GetKey("space")) {
@@ -56,7 +59,9 @@ public class Jerry_Movement : MonoBehaviour
 
         // Decceleration when spacebar is released
         if (spacebarHeld == false && thrust > 0.0f) {
-            thrust -= 0.01f;        // Decrement thrust a little each frame for decceleration
+            thrust -= fallSpeed; //0.01f;  Decrement thrust a little each frame for decceleration
+
+            jerryRb.MovePosition(transform.position + movementVec);
         }
 
         // Horizontal movement with 'a', 'd', left and right arrows

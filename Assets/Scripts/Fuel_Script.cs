@@ -7,6 +7,7 @@ public class Fuel_Script : MonoBehaviour
     public static float totalFuel = 100.0f;
 
 
+
     // Update is called once per frame
     void Update()
     {
