@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Play_Again : MonoBehaviour
+public class Shop : MonoBehaviour
 {
-    public void PlayAgainFunc() {
-		SceneManager.LoadScene(0);
+	public void ShopFunc() {
+		SceneManager.LoadScene(1);
 	}
 }
