@@ -6,14 +6,14 @@ public class Upgrades : MonoBehaviour
 {
     [SerializeField] private int gold = 0;
     [SerializeField] private float fuel = 0.0f;
-    [SerializeField] private bool doubleTank = false;
-    [SerializeField] private bool extraCapacity = false;
-    [SerializeField] private bool extraEfficiency = false;
-    [SerializeField] private bool armour = false;
-    [SerializeField] private bool booster = false;
-    [SerializeField] private bool slowFall = false;
-    [SerializeField] private bool hover = false;
-    [SerializeField] private bool infiniteFuel = false;
+    [SerializeField] public static bool doubleTank = false;
+    [SerializeField] public static bool extraCapacity = false;
+    [SerializeField] public static bool extraEfficiency = false;
+    [SerializeField] public static bool armour = false;
+    [SerializeField] public static bool booster = false;
+    [SerializeField] public static bool slowFall = false;
+    [SerializeField] public static bool hover = false;
+    [SerializeField] public static bool infiniteFuel = false;
 
     // Tick game objects
     [SerializeField] private GameObject doubleTankTick = null;

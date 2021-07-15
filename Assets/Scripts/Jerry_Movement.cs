@@ -15,7 +15,8 @@ public class Jerry_Movement : MonoBehaviour
     private bool spacebarHeld = false;
     private bool horizontalMovementRightHeld = false;
     private bool horizontalMovementLeftHeld = false;
-    [SerializeField] private float speed = 0.0f;
+	public static float thrustToBar = 0.0f;
+	[SerializeField] private float speed = 0.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,8 @@ public class Jerry_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        thrustToBar = thrust;
+
         // Calculate Jerry's air speed
         speed = transform.position.y / Time.time;
 

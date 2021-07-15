@@ -10,7 +10,12 @@ public class Fuel_Pickup : MonoBehaviour
         Debug.Log("Fuel Collected");
 
         // Increment fuel
-        Fuel_Script.totalFuel += fuelAmount;
+        if (Fuel_Script.totalFuel + fuelAmount < Fuel_Script.maxFuel) {
+            Fuel_Script.totalFuel += fuelAmount;
+        } else {
+            Fuel_Script.totalFuel += ((Fuel_Script.totalFuel + fuelAmount) - Fuel_Script.maxFuel);
+		}
+        
 
         Destroy(gameObject);
 	}
