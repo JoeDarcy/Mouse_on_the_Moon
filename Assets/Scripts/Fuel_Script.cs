@@ -13,6 +13,10 @@ public class Fuel_Script : MonoBehaviour
 	// Update is called once per frame
 	void Update()
     {
+		if (totalFuel > maxFuel) {
+			totalFuel = maxFuel;
+		}
+
         Debug.Log("Total Fuel: " + totalFuel);
     }
 }

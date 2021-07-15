@@ -5,6 +5,7 @@ using UnityEngine;
 public class Upgrades : MonoBehaviour
 {
     [SerializeField] private int gold = 0;
+    [SerializeField] private int freeGold = 10;
     [SerializeField] private float fuel = 0.0f;
     [SerializeField] public static bool doubleTank = false;
     [SerializeField] public static bool extraCapacity = false;
@@ -29,11 +30,43 @@ public class Upgrades : MonoBehaviour
     private void Update() {
         fuel = Fuel_Script.totalFuel;
         gold = Coin_Script.totalCoins;
-	}
+
+        if (doubleTank == true) {
+            doubleTankTick.SetActive(false);
+        }
+
+        if (extraCapacity == true) {
+            extraCapacityTick.SetActive(false);
+        }
+
+        if (extraEfficiency == true) {
+            extraEfficiencyTick.SetActive(false);
+        }
+
+        if (armour == true) {
+            armourTick.SetActive(false);
+        }
+
+        if (booster == true) {
+            boosterTick.SetActive(false);
+        }
+
+        if (slowFall == true) {
+            slowFallTick.SetActive(false);
+        }
+
+        if (hover == true) {
+            hoverTick.SetActive(false);
+        }
+
+        if (infiniteFuel == true) {
+            infiniteFuelTick.SetActive(false);
+        }
+    }
 
 
 	public void AddGold() {
-        Coin_Script.totalCoins += 5;
+        Coin_Script.totalCoins += freeGold;
 	}
 
     public void DoubleTankFunc() {
@@ -84,6 +117,7 @@ public class Upgrades : MonoBehaviour
     public void SlowFallFunc() {
         if (Coin_Script.totalCoins >= 30 && slowFall == false) {
             slowFall = true;
+            Jerry_Movement.fallSpeed = 0.001f;
             Coin_Script.totalCoins -= 30;
             slowFallTick.SetActive(true);
         }
@@ -93,7 +127,7 @@ public class Upgrades : MonoBehaviour
         if (Coin_Script.totalCoins >= 35 && hover == false) {
             hover = true;
             Coin_Script.totalCoins -= 35;
-            Jerry_Movement.fallSpeed = 0.0001f;
+            Jerry_Movement.fallSpeed = 0.001f;
             hoverTick.SetActive(true);
         }
     }

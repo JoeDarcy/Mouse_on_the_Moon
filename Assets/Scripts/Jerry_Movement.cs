@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Jerry_Movement : MonoBehaviour
 {
-    // Punblic static variables
+    // Public static variables
     public static float burnRate = 0.1f;
-    public static float fallSpeed = 0.01f;
+    public static float fallSpeed = 0.05f;
+
+    // Thrust effect
+    [SerializeField] private GameObject thrustEffect = null;
 
     [SerializeField] private Rigidbody2D jerryRb = null;
     [SerializeField] private float thrust = 10.0f;
@@ -38,6 +41,10 @@ public class Jerry_Movement : MonoBehaviour
         // Apply thrust to Jerry if space bar is held down
         if (Input.GetKey("space")) {
 
+            thrustEffect.SetActive(true);
+
+            Mini_Map.miniMapMovement = true;
+
             spacebarHeld = true;
             Debug.Log("Space was pressed");
 
@@ -58,13 +65,15 @@ public class Jerry_Movement : MonoBehaviour
                     if (thrust < 0.75) {
                         thrust += 0.001f / 2;        // Increment thrust a little each frame for acceleration
                     }
-                }
+                }                
             }
         }
 
         // Reset thrust after spacebar is released
         if (Input.GetKeyUp("space")) {
-            spacebarHeld = false;           
+            spacebarHeld = false;
+            thrustEffect.SetActive(false);
+            Mini_Map.miniMapMovement = false;
         }
 
         // Decceleration when spacebar is released
@@ -113,6 +122,10 @@ public class Jerry_Movement : MonoBehaviour
 
         if (horizontalMovementLeftHeld == false && horizontalMovement < 0) {
             horizontalMovement += 0.01f;
+        }
+
+        if (thrust < 0) {
+            thrust = 0;
         }
     }
 }
