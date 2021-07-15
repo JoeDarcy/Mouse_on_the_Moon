@@ -52,6 +52,13 @@ public class Jerry_Movement : MonoBehaviour
                 if (thrust < 0.5) {
                     thrust += 0.001f / 2;        // Increment thrust a little each frame for acceleration
                 }
+
+                // Apply Booster thrust to Jerry
+                if (Upgrades.booster == true) {
+                    if (thrust < 0.75) {
+                        thrust += 0.001f / 2;        // Increment thrust a little each frame for acceleration
+                    }
+                }
             }
         }
 

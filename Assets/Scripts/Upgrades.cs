@@ -40,6 +40,7 @@ public class Upgrades : MonoBehaviour
         if (Coin_Script.totalCoins >= 5 && doubleTank == false) {
             doubleTank = true;
             Fuel_Script.totalFuel *= 2;
+            Fuel_Script.maxFuel *= 2;
             Coin_Script.totalCoins -= 5;
             doubleTankTick.SetActive(true);
         }
@@ -49,6 +50,7 @@ public class Upgrades : MonoBehaviour
         if (Coin_Script.totalCoins >= 10 && extraCapacity == false) {
             extraCapacity = true;
             Fuel_Script.totalFuel *= 1.5f;
+            Fuel_Script.maxFuel *= 1.5f;
             Coin_Script.totalCoins -= 10;
             extraCapacityTick.SetActive(true);
         }
