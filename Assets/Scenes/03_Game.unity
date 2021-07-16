@@ -11567,6 +11567,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bird
       objectReference: {fileID: 0}
+    - target: {fileID: 2579682483107880720, guid: 8ed5c4fc0e115f44499d380c77ca7f2f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2579682483107880751, guid: 8ed5c4fc0e115f44499d380c77ca7f2f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11624,12 +11629,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ed5c4fc0e115f44499d380c77ca7f2f, type: 3}
---- !u!1 &1278045434 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2579682483107880720, guid: 8ed5c4fc0e115f44499d380c77ca7f2f,
-    type: 3}
-  m_PrefabInstance: {fileID: 1278045433}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1280108120
 GameObject:
   m_ObjectHideFlags: 0
@@ -25410,12 +25409,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1920912888 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7217005147311912427, guid: ce7eac1ea1e3c2f4fa7270c5cc5b22ba,
-    type: 3}
-  m_PrefabInstance: {fileID: 7217005147548809235}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1926056852
 GameObject:
   m_ObjectHideFlags: 0
@@ -26454,7 +26447,8 @@ PrefabInstance:
         type: 3}
       propertyPath: enemy
       value: 
-      objectReference: {fileID: 1278045434}
+      objectReference: {fileID: 2579682483107880720, guid: 8ed5c4fc0e115f44499d380c77ca7f2f,
+        type: 3}
     - target: {fileID: 2712545773489891953, guid: 335b5112a1139584898e6b5af414235d,
         type: 3}
       propertyPath: spawnTimer
@@ -26473,7 +26467,7 @@ PrefabInstance:
     - target: {fileID: 2712545773489891966, guid: 335b5112a1139584898e6b5af414235d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.75
+      value: 25.57
       objectReference: {fileID: 0}
     - target: {fileID: 2712545773489891966, guid: 335b5112a1139584898e6b5af414235d,
         type: 3}
@@ -26598,7 +26592,8 @@ PrefabInstance:
         type: 3}
       propertyPath: enemy
       value: 
-      objectReference: {fileID: 1920912888}
+      objectReference: {fileID: 7217005147311912427, guid: ce7eac1ea1e3c2f4fa7270c5cc5b22ba,
+        type: 3}
     - target: {fileID: 2891905478936554605, guid: 6a9fc402a5077b24badfd3350e9400fe,
         type: 3}
       propertyPath: spawnTimer
@@ -26683,6 +26678,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor_Empty
       objectReference: {fileID: 0}
+    - target: {fileID: 6881235096828888641, guid: 6aaa56de26e568643900dd704ff77deb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6aaa56de26e568643900dd704ff77deb, type: 3}
 --- !u!1001 &7217005147548809235
@@ -26751,6 +26751,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Plane
+      objectReference: {fileID: 0}
+    - target: {fileID: 7217005147311912427, guid: ce7eac1ea1e3c2f4fa7270c5cc5b22ba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce7eac1ea1e3c2f4fa7270c5cc5b22ba, type: 3}
