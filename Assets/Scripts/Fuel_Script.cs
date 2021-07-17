@@ -17,6 +17,7 @@ public class Fuel_Script : MonoBehaviour
 			totalFuel = maxFuel;
 		}
 
-        Debug.Log("Total Fuel: " + totalFuel);
-    }
+        //Debug.Log("Total Fuel: " + totalFuel);
+		//Debug.Log("Max Fuel: " + maxFuel);
+	}
 }

@@ -21,11 +21,6 @@ public class Jerry_Movement : MonoBehaviour
 	public static float thrustToBar = 0.0f;
 	[SerializeField] private float speed = 0.0f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -46,7 +41,7 @@ public class Jerry_Movement : MonoBehaviour
             Mini_Map.miniMapMovement = true;
 
             spacebarHeld = true;
-            Debug.Log("Space was pressed");
+            //Debug.Log("Space was pressed");
 
             // Check totalFuel is greater than 0.1f and apply thrust to Jerry, (with acceleration)
             if (Fuel_Script.totalFuel > 0.1f) {

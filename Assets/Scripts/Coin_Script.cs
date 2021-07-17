@@ -9,6 +9,6 @@ public class Coin_Script : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
-        Debug.Log("Total Coins: " + totalCoins);
+        //Debug.Log("Total Coins: " + totalCoins);
     }
 }

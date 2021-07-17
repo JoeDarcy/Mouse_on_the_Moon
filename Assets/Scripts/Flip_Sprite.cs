@@ -18,12 +18,12 @@ public class Flip_Sprite : MonoBehaviour
     void Update()
     {
         if (previousPosition.x > transform.position.x) {
-            Debug.Log("Moving Left");
+            //Debug.Log("Moving Left");
             transform.localRotation = Quaternion.Euler(0, 180, 0);
         }
 
         if (previousPosition.x < transform.position.x) {
-            Debug.Log("Moving RIght");
+            //Debug.Log("Moving RIght");
             transform.localRotation = Quaternion.Euler(0, 0, 0);
         }
 

@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 2579682482981764064}
   - component: {fileID: 2579682482981764095}
   - component: {fileID: 2579682482981764094}
+  - component: {fileID: 3479598196266533508}
   m_Layer: 0
   m_Name: Bird_Sprite
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,6 +97,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeedX: -0.01
   moveSpeedY: 0.01
+--- !u!61 &3479598196266533508
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2579682482981764065}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.12764856, y: 0.0005168021}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0.21, w: 0}
+    pivot: {x: 0.26361373, y: 0.49838498}
+    oldSize: {x: 0.54, y: 0.32}
+    newSize: {x: 0.54, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.54, y: 0.32}
+  m_EdgeRadius: 0
 --- !u!1 &2579682483107880720
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,7 +134,7 @@ GameObject:
   - component: {fileID: 2579682483107880751}
   m_Layer: 0
   m_Name: Bird
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
