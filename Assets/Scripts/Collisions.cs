@@ -111,7 +111,7 @@ public class Collisions : MonoBehaviour
     }
 
 	private void OnTriggerEnter2D(Collider2D collision) {
-        Debug.Log("Collision with: " + collision);
+        //Debug.Log("Collision with: " + collision);
 
         if (collision.tag == "Enemy") {
             //Debug.Log("Hit detected!");

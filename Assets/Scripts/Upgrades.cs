@@ -137,7 +137,7 @@ public class Upgrades : MonoBehaviour
     public void InfiniteFuelFunc() {
         if (Coin_Script.totalCoins >= 40 && infiniteFuel == false) {
             infiniteFuel = true;
-            Fuel_Script.totalFuel = 1000000.0f;
+            Jerry_Movement.burnRate = 0;
             Coin_Script.totalCoins -= 40;
             infiniteFuelTick.SetActive(true);
         }

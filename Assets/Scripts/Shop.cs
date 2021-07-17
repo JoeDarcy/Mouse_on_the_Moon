@@ -6,6 +6,6 @@ using UnityEngine.SceneManagement;
 public class Shop : MonoBehaviour
 {
 	public void ShopFunc() {
-		SceneManager.LoadScene(2);
+		SceneManager.LoadScene(3);
 	}
 }

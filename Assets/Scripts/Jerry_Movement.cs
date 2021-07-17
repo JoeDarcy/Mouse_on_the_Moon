@@ -10,6 +10,10 @@ public class Jerry_Movement : MonoBehaviour
 
     // Thrust effect
     [SerializeField] private GameObject thrustEffect = null;
+    // Inifity symbol for fuel on upgrade
+    [SerializeField] private GameObject infinitySymbol = null;
+    [SerializeField] private GameObject fuelMaxText = null;
+    [SerializeField] private GameObject fuelTotalText = null;
 
     [SerializeField] private Rigidbody2D jerryRb = null;
     [SerializeField] private float thrust = 10.0f;
@@ -25,6 +29,16 @@ public class Jerry_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Upgrades.infiniteFuel == true) {
+            infinitySymbol.SetActive(true);
+            fuelMaxText.SetActive(false);
+            fuelTotalText.SetActive(false);
+        } else {
+            infinitySymbol.SetActive(false);
+            fuelMaxText.SetActive(true);
+            fuelTotalText.SetActive(true);
+        }
+
         thrustToBar = thrust;
 
         // Calculate Jerry's air speed
