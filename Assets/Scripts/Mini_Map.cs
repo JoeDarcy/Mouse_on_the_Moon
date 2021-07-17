@@ -21,6 +21,9 @@ public class Mini_Map : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Fuel_Script.totalFuel < 0.1f) {
+            miniMapMovement = false;
+		}
 
         if (miniMapMovement == true) {
             yPos = transform.localPosition.y + miniMapSpeed * Time.deltaTime;
