@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Play_Again : MonoBehaviour
 {
-    public void PlayAgainFunc() {
-		SceneManager.LoadScene(0);
+	[SerializeField] private int sceneNumber = 0;
+
+	public void PlayAgainFunc() {
+		SceneManager.LoadScene(sceneNumber);
 	}
 }

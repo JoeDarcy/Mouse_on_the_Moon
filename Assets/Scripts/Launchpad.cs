@@ -17,6 +17,7 @@ public class Launchpad : MonoBehaviour
 		if (explosionArmed == true) {
 			explosion.SetActive(true);
 			jerry.SetActive(false);
+			Fuel_Script.totalFuel = 0;
 		}
 	}
 }

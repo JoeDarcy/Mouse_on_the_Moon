@@ -28,6 +28,7 @@ public class Upgrades : MonoBehaviour
 
     // Update and display fuel and gold
     private void Update() {
+
         fuel = Fuel_Script.totalFuel;
         gold = Coin_Script.totalCoins;
 
@@ -37,7 +38,7 @@ public class Upgrades : MonoBehaviour
 
         if (extraCapacity == true) {
             extraCapacityTick.SetActive(false);
-        }
+        }      
 
         if (extraEfficiency == true) {
             extraEfficiencyTick.SetActive(false);
@@ -101,6 +102,7 @@ public class Upgrades : MonoBehaviour
     public void ArmourFunc() {
         if (Coin_Script.totalCoins >= 20 && armour == false) {
             armour = true;
+            Collisions.armour = 2;
             Coin_Script.totalCoins -= 20;
             armourTick.SetActive(true);
         }
