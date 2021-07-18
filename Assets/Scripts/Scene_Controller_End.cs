@@ -41,11 +41,12 @@ public class Scene_Controller_End : MonoBehaviour
 
         if (timer > transition_2) {
             wink.SetActive(true);
-		}
+            look.SetActive(true);
+        }
 
         if (timer > transition_3) {
             wink.SetActive(false);
-            look.SetActive(true);
+            look.SetActive(false);
         }
 
         if (timer > endSceneTransition) {

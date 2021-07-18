@@ -6,8 +6,8 @@ public class Jerry_Movement : MonoBehaviour
 {
     // Public static variables
     public static float burnRate = 0.1f;
-    public static float fallSpeed = 0.05f;
-
+    public static float fallSpeed = 0.001f;
+   
     // Thrust effect
     [SerializeField] private GameObject thrustEffect = null;
     // Inifity symbol for fuel on upgrade

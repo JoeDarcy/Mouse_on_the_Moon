@@ -26,8 +26,9 @@ public class Upgrades : MonoBehaviour
     [SerializeField] private GameObject hoverTick = null;
     [SerializeField] private GameObject infiniteFuelTick = null;
 
-    // Update and display fuel and gold
-    private void Update() {
+
+	// Update and display fuel and gold
+	private void Update() {
 
         fuel = Fuel_Script.totalFuel;
         gold = Coin_Script.totalCoins;
@@ -67,7 +68,9 @@ public class Upgrades : MonoBehaviour
 
 
 	public void AddGold() {
-        Coin_Script.totalCoins += freeGold;
+        if (Password.freeGoldUnlock == true) {
+            Coin_Script.totalCoins += freeGold;
+        }
 	}
 
     public void DoubleTankFunc() {
@@ -119,7 +122,7 @@ public class Upgrades : MonoBehaviour
     public void SlowFallFunc() {
         if (Coin_Script.totalCoins >= 30 && slowFall == false) {
             slowFall = true;
-            Jerry_Movement.fallSpeed = 0.001f;
+            Jerry_Movement.fallSpeed = 0.0005f;
             Coin_Script.totalCoins -= 30;
             slowFallTick.SetActive(true);
         }
@@ -129,7 +132,7 @@ public class Upgrades : MonoBehaviour
         if (Coin_Script.totalCoins >= 35 && hover == false) {
             hover = true;
             Coin_Script.totalCoins -= 35;
-            Jerry_Movement.fallSpeed = 0.001f;
+            Jerry_Movement.fallSpeed = 0.00001f;
             hoverTick.SetActive(true);
         }
     }
