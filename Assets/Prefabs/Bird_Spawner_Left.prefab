@@ -16,12 +16,12 @@ PrefabInstance:
     - target: {fileID: 1591594988809632096, guid: 7f7586abe43eeca469f7351a3693d94d,
         type: 3}
       propertyPath: spawnTimer
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1591594988809632096, guid: 7f7586abe43eeca469f7351a3693d94d,
         type: 3}
       propertyPath: spawnRate
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1591594988809632096, guid: 7f7586abe43eeca469f7351a3693d94d,
         type: 3}

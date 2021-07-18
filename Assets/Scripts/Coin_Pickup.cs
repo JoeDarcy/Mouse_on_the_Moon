@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Coin_Pickup : MonoBehaviour
 {
+
     private void OnTriggerEnter2D(Collider2D collision) {
 
         if (collision.tag == "Player") {
-            //Debug.Log("Coin Collected");
-            //Debug.Log("Collision with: " + collision);
+            Debug.Log("Coin Collected");
+            Debug.Log("Collision with: " + collision);
 
             // Increment fuel
             Coin_Script.totalCoins += 1;
