@@ -576,7 +576,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1261420856}
-        m_MethodName: PlayAgainFunc
+        m_MethodName: PlayGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2999,7 +2999,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1261420855}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0beeea2a785f6749b143a5cdb864348, type: 3}
+  m_Script: {fileID: 11500000, guid: 84e84e047c06dd04a8ff47b19bf32939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneNumber: 2

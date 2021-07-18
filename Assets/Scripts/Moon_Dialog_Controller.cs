@@ -14,6 +14,7 @@ public class Moon_Dialog_Controller : MonoBehaviour
     [SerializeField] private GameObject jerry_3 = null;
     [SerializeField] private GameObject isobelle_1 = null;
     [SerializeField] private GameObject harriet_1 = null;
+    [SerializeField] private GameObject fade = null;
 
 
     [SerializeField] private float timer = 0.0f;
@@ -23,6 +24,8 @@ public class Moon_Dialog_Controller : MonoBehaviour
     [SerializeField] private float transition_4 = 0.0f;
     [SerializeField] private float transition_Gameplay = 0.0f;
     [SerializeField] private float fireGun = 0.0f;
+    [SerializeField] private float fadeTime = 0.0f;
+    [SerializeField] private float harrietKilled = 0.0f;
 
     public static bool fightWon = false;
 
@@ -67,8 +70,16 @@ public class Moon_Dialog_Controller : MonoBehaviour
             jerry_fireGun.SetActive(true);
 		}
 
+        if (timer > fadeTime) {
+            fade.SetActive(true);
+        }
+
+        if (timer > harrietKilled) {
+            fightWon = true;
+        }
+
         if (fightWon == true) {
-            SceneManager.LoadScene(6);
+            SceneManager.LoadScene(5);
         }
     }
 }

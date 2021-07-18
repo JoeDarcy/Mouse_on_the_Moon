@@ -14,6 +14,7 @@ public class Launchpad : MonoBehaviour
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision) {
+		//Debug.Log("Triggered by " + collision);
 		if (explosionArmed == true) {
 			explosion.SetActive(true);
 			jerry.SetActive(false);

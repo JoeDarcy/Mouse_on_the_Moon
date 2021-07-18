@@ -9,11 +9,13 @@ public class Scene_Controller : MonoBehaviour
     [SerializeField] private GameObject jerryAngry = null;
     [SerializeField] private GameObject hearts = null;
     [SerializeField] private GameObject gun = null;
+    [SerializeField] private GameObject fade = null;
 
     [SerializeField] private float timer = 0.0f;
     [SerializeField] private float transition_1 = 0.0f;
     [SerializeField] private float transition_2 = 0.0f;
     [SerializeField] private float transition_3 = 0.0f;
+    [SerializeField] private float fadeToBlack = 0.0f;
     [SerializeField] private float endSceneTransition = 0.0f;
 
 
@@ -40,6 +42,10 @@ public class Scene_Controller : MonoBehaviour
         if (timer > transition_3) {
             gun.SetActive(true);
 		}
+
+        if (timer > fadeToBlack) {
+            fade.SetActive(true);
+        }
 
         if (timer > endSceneTransition) {
             SceneManager.LoadScene(2);

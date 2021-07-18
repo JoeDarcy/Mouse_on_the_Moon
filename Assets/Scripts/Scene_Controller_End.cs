@@ -9,11 +9,13 @@ public class Scene_Controller_End : MonoBehaviour
     [SerializeField] private GameObject hearts = null;
     [SerializeField] private GameObject wink = null;
     [SerializeField] private GameObject look = null;
+    [SerializeField] private GameObject fade = null;
 
     [SerializeField] private float timer = 0.0f;
     [SerializeField] private float transition_1 = 0.0f;
     [SerializeField] private float transition_2 = 0.0f;
     [SerializeField] private float transition_3 = 0.0f;
+    [SerializeField] private float fadeTime = 0.0f;
     [SerializeField] private float endSceneTransition = 0.0f;
 
     [SerializeField] private Camera cam = null;
@@ -48,6 +50,10 @@ public class Scene_Controller_End : MonoBehaviour
             wink.SetActive(false);
             look.SetActive(false);
         }
+
+        if (timer > fadeTime) {
+            fade.SetActive(true);
+		}
 
         if (timer > endSceneTransition) {
             SceneManager.LoadScene(6);
