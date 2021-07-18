@@ -21,12 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/05_Moon_Cutscene.unity
     guid: cb8413fd8ffc20944bc93e4ceab1235f
   - enabled: 1
-    path: Assets/Scenes/06_Boss_Fight.unity
-    guid: 1ab1a496be45e894bb1fbb273cdc842f
-  - enabled: 1
-    path: Assets/Scenes/07_End_Cutscene.unity
+    path: Assets/Scenes/06_End_Cutscene.unity
     guid: eb3549c6cbfd6394ba0bf2b7e516f159
   - enabled: 1
-    path: Assets/Scenes/08_Credits.unity
+    path: Assets/Scenes/07_Credits.unity
     guid: 94d49839dd6c2f044b976ce1556bb7e6
   m_configObjects: {}

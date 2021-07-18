@@ -8,6 +8,7 @@ public class Scene_Controller_End : MonoBehaviour
     [SerializeField] private GameObject reunion = null;
     [SerializeField] private GameObject hearts = null;
     [SerializeField] private GameObject wink = null;
+    [SerializeField] private GameObject look = null;
 
     [SerializeField] private float timer = 0.0f;
     [SerializeField] private float transition_1 = 0.0f;
@@ -44,10 +45,11 @@ public class Scene_Controller_End : MonoBehaviour
 
         if (timer > transition_3) {
             wink.SetActive(false);
+            look.SetActive(true);
         }
 
         if (timer > endSceneTransition) {
-            SceneManager.LoadScene(7);
+            SceneManager.LoadScene(6);
         }
     }
 }
