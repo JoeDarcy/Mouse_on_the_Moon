@@ -12,10 +12,15 @@ PrefabInstance:
       propertyPath: moveSpeedX
       value: 0.04
       objectReference: {fileID: 0}
+    - target: {fileID: 6703062003660224011, guid: 25f2c48cc81665e43a0e3b429371e9c9,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 65
+      objectReference: {fileID: 0}
     - target: {fileID: 6703062004511639368, guid: 25f2c48cc81665e43a0e3b429371e9c9,
         type: 3}
       propertyPath: m_Name
-      value: Meteor_Empty_Left
+      value: Meteor_Empty_Left Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6703062004511639369, guid: 25f2c48cc81665e43a0e3b429371e9c9,
         type: 3}

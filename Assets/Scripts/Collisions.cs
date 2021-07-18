@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Collisions : MonoBehaviour
 {
+    [SerializeField] private GameObject damageAudio = null;
+
     [SerializeField] private GameObject tankFlash = null;
     [SerializeField] private GameObject tankLeakEffect_1 = null;
     [SerializeField] private GameObject tankLeakEffect_2 = null;
@@ -56,6 +58,8 @@ public class Collisions : MonoBehaviour
         // Tank flashing red on hit
         if (tankHit == true && currentflashCount > 0) {
 
+            damageAudio.SetActive(true);
+
             hitTimer -= Time.deltaTime;
 
             if (hitTimer < hitTimerStartingValue / 2) {
@@ -73,6 +77,8 @@ public class Collisions : MonoBehaviour
             tankFlash.SetActive(false);
             tankHit = false;
             currentflashCount = flashCount;
+
+            damageAudio.SetActive(false);
         }
 
         // Apply armour multipier

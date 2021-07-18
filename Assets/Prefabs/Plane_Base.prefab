@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7217005147311912424}
   - component: {fileID: 8585104970747733938}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Plane_Base
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 39
+  m_SortingOrder: 65
   m_Sprite: {fileID: 21300000, guid: eefb2c2568f94404597be6d911281ed7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -98,6 +98,8 @@ MonoBehaviour:
   moveSpeedX: -0.08
   moveSpeedY: 0
   bird: {fileID: 7217005147311912427}
+  rightBounds: 8
+  leftBounds: -8
 --- !u!61 &8585104970747733938
 BoxCollider2D:
   m_ObjectHideFlags: 0

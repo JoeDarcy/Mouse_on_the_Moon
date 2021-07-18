@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Coin_Pickup : MonoBehaviour
 {
+    [SerializeField] private GameObject coinAudio = null;
+
 
     private void OnTriggerEnter2D(Collider2D collision) {
 
@@ -14,7 +16,10 @@ public class Coin_Pickup : MonoBehaviour
             // Increment fuel
             Coin_Script.totalCoins += 1;
 
+            Instantiate(coinAudio, transform.position, Quaternion.identity);
+
             Destroy(gameObject);
+
         }
     }
 }

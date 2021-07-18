@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Fuel_Pickup : MonoBehaviour
 {
+    public static bool fuelAudioTrigger = false;
     [SerializeField] private float fuelAmount = 10.0f;
+
+    [SerializeField] private GameObject fuelAudio = null;
 
 	private void OnTriggerEnter2D(Collider2D collision) {
 
@@ -17,6 +20,9 @@ public class Fuel_Pickup : MonoBehaviour
                 Fuel_Script.totalFuel += ((Fuel_Script.totalFuel + fuelAmount) - Fuel_Script.maxFuel);
             }
 
+            Instantiate(fuelAudio, transform.position, Quaternion.identity);
+
+            fuelAudioTrigger = true;
 
             Destroy(gameObject);
         }

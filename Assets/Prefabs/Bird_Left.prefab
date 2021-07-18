@@ -102,7 +102,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 49
+  m_SortingOrder: 65
   m_Sprite: {fileID: 21300000, guid: 88e1cb98f3d6f8e4f847fafb8e9742fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -129,6 +129,8 @@ MonoBehaviour:
   moveSpeedX: 0.01
   moveSpeedY: 0.01
   bird: {fileID: 4249168025696824203}
+  rightBounds: 8
+  leftBounds: -8
 --- !u!61 &2990047505148065311
 BoxCollider2D:
   m_ObjectHideFlags: 0

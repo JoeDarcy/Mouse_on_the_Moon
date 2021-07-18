@@ -7,7 +7,9 @@ public class Jerry_Movement : MonoBehaviour
     // Public static variables
     public static float burnRate = 0.1f;
     public static float fallSpeed = 0.001f;
-   
+
+    [SerializeField] private GameObject jetPackAudio = null;
+
     // Thrust effect
     [SerializeField] private GameObject thrustEffect = null;
     // Inifity symbol for fuel on upgrade
@@ -50,6 +52,7 @@ public class Jerry_Movement : MonoBehaviour
         // Apply thrust to Jerry if space bar is held down
         if (Input.GetKey("space")) {
 
+            jetPackAudio.SetActive(true);
             thrustEffect.SetActive(true);
 
             Mini_Map.miniMapMovement = true;
@@ -80,6 +83,7 @@ public class Jerry_Movement : MonoBehaviour
 
         // Reset thrust after spacebar is released
         if (Input.GetKeyUp("space")) {
+            jetPackAudio.SetActive(false);
             spacebarHeld = false;
             thrustEffect.SetActive(false);
             Mini_Map.miniMapMovement = false;
