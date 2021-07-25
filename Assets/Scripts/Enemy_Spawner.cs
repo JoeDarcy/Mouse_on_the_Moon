@@ -23,6 +23,7 @@ public class Enemy_Spawner : MonoBehaviour
         }
         
         if (spawnTimer < 0.1f) {
+
             Instantiate(enemy, transform.position, Quaternion.identity);
             spawnTimer = spawnRate;
 		}

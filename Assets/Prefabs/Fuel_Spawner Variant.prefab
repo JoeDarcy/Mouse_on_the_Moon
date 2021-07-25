@@ -1,5 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &8076444511014079772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2435461588559178030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f007eaaf21a8cb49a57e97710d9e1f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuel: {fileID: 9215159569109132829, guid: 36a813a4778a4154f88491db0555e573, type: 3}
+  startTimer: 1
+  spawnTimer: 3
+  spawnRate: 3
+  instance: {fileID: 0}
 --- !u!1001 &4024534014158671951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31,7 +48,7 @@ PrefabInstance:
     - target: {fileID: 1591594988809632097, guid: 7f7586abe43eeca469f7351a3693d94d,
         type: 3}
       propertyPath: m_Name
-      value: Fuel_Spawner
+      value: Fuel_Spawner Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1591594988809632111, guid: 7f7586abe43eeca469f7351a3693d94d,
         type: 3}
@@ -88,5 +105,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1591594988809632096, guid: 7f7586abe43eeca469f7351a3693d94d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7f7586abe43eeca469f7351a3693d94d, type: 3}
+--- !u!1 &2435461588559178030 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1591594988809632097, guid: 7f7586abe43eeca469f7351a3693d94d,
+    type: 3}
+  m_PrefabInstance: {fileID: 4024534014158671951}
+  m_PrefabAsset: {fileID: 0}
